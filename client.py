@@ -1,8 +1,24 @@
-﻿import os
 from typing import Dict, Any
 
-class Client:
-    def __init__(self):
-        pass
-    def process(self, value: str) -> Dict[str, Any]:
-        return {"result_val": f"Processed: {value} via genpark-search-synonym-agent-skill"}
+class SearchSynonymClient:
+    def optimize_query(self, user_query: str) -> Dict[str, Any]:
+        synonyms = {
+            "mobile": "phone",
+            "laptop": "computer",
+            "earbuds": "headphones",
+            "genspark": "genpark"
+        }
+        words = user_query.lower().split()
+        optimized = []
+        corrections = {}
+        for w in words:
+            if w in synonyms:
+                optimized.append(synonyms[w])
+                corrections[w] = synonyms[w]
+            else:
+                optimized.append(w)
+        return {
+            "original_query": user_query,
+            "optimized_query": " ".join(optimized),
+            "corrections_made": corrections
+        }

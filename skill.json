@@ -1,17 +1,17 @@
-﻿{
-    "version":  "1.0.0",
-    "name":  "genpark-search-synonym-agent-skill",
-    "outputs":  {
-                    "result_val":  {
-                                       "type":  "string"
-                                   }
-                },
-    "description":  "GenPark search query synonym matching optimizer and spelling errors corrector skill.",
-    "inputs":  {
-                   "input_val":  {
-                                     "type":  "string"
-                                 }
-               },
-    "author":  "alphaparkinc",
-    "prompt":  "Coordinate genpark-search-synonym-agent-skill operations using the input configurations."
+{
+  "version": "1.0.0",
+  "name": "genpark-search-synonym-agent-skill",
+  "outputs": {
+    "result_val": {
+      "type": "string"
+    }
+  },
+  "description": "GenPark search query synonym matching optimizer and spelling errors corrector skill.",
+  "inputs": {
+    "input_val": {
+      "type": "string"
+    }
+  },
+  "author": "genpark",
+  "prompt": "Coordinate genpark-search-synonym-agent-skill operations using the input configurations."
 }
